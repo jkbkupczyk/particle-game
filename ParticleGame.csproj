@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+
+	  <IncludeNativeLibrariesForSelfExtract>True</IncludeNativeLibrariesForSelfExtract>
+	  <IncludeAllContentForSelfExtract>True</IncludeAllContentForSelfExtract>
+	  <DebugType>None</DebugType>
+	  <DebugSymbols>false</DebugSymbols>
+	  <Authors>Jakub Kupczyk</Authors>
+	  <ApplicationIcon>icon.ico</ApplicationIcon>
+	  <Win32Resource />
+	  <RepositoryUrl>https://github.com/jkbkupczyk/particle-game</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/jkbkupczyk/particle-game</PackageProjectUrl>
+	  <PackageIcon>icon.jpg</PackageIcon>
+	  <PackageIconUrl />
+	  <Description>Simple game made with C# WPF. Simulates particle movement.</Description>
+	  <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Font\dogicapixel.ttf" />
+    <None Remove="Resources\Images\icon.jpg" />
+    <None Remove="Resources\Sound\menu_select.wav" />
+    <None Remove="Resources\Sound\pause.wav" />
+    <None Include="Resources\Images\icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Font\dogicapixel.ttf" />
+    <Resource Include="Resources\Images\icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Sound\menu_select.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Sound\pause.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

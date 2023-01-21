@@ -13,3 +13,4 @@ See [Releases](https://github.com/jkbkupczyk/particle-game/releases)
 - Improve entity movement
 - Implement Settings menu
 - Implement Serialization/Deserialization
+- Upgrade to .NET 7
